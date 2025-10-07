@@ -1,0 +1,231 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: "Segoe UI", Ubuntu, Sans-Serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho e navegação fixa */
+header {
+    background-color: rgba(20, 20, 20, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Espaço para compensar o cabeçalho fixo */
+main {
+    max-width: 1000px;
+    margin: 100px auto 40px;
+    padding: 20px;
+}
+
+/* Estilização das seções */
+section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+section h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #ff5722;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Estilização específica para a lista do portfólio */
+section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Contêiner para imagens */
+section ul li {    
+    width: 350px;
+    height: 350px;
+    background: #292929; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    overflow: hidden;
+}
+
+/* Ajuste do tamanho das imagens */
+section ul li img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+/* Estilização da imagem do perfil */
+#sobre_imagem {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#links_sobremim {
+    display: flex;
+    flex-direction: column; /* Mantém o título acima e os botões abaixo */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilização do título */
+#sobremim_links_titulo {
+    font-size: 1.5rem;
+    color: #ff5722;
+    text-align: center;
+}
+
+/* Contêiner para os botões */
+.sobremim_links_botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center; 
+}
+
+/* Estilização dos botões */
+.sobremim_links_botao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #292929;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.sobremim_links_botao img {
+    width: 30px;
+    height: 30px;
+}
+
+.sobremim_links_botao:hover {
+    background: #ff5722;
+    transform: scale(1.05);
+}
+
+
+/* Formulário da página de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+form button {
+    align-self: center;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #e64a19;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    main {
+        margin-top: 120px;
+        padding: 10px;
+    }
+    section ul {
+        grid-template-columns: 1fr; /* Passa a ter apenas uma coluna */
+    }
+}
